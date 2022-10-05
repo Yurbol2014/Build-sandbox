@@ -7,5 +7,12 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Yuriy Bolotin",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.19.3",
+    "@babel/core": "^7.19.3",
+    "@babel/plugin-transform-block-scoping": "^7.18.9",
+    "@babel/plugin-transform-classes": "^7.19.0",
+    "@babel/plugin-transform-template-literals": "^7.18.9"
+  }
 }
