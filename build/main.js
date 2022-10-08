@@ -1,24 +1,15 @@
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+"use strict";
 
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-
-var App = /*#__PURE__*/function () {
-  function App() {
-    _classCallCheck(this, App);
+class App {
+  constructor() {
+    _defineProperty(this, "run", async (name = 'World') => {
+      console.log(`Hello ${name}`);
+    });
   }
 
-  _createClass(App, [{
-    key: "run",
-    value: function run() {
-      var name = 'World';
-      console.log("Hello ".concat(name));
-    }
-  }]);
+}
 
-  return App;
-}();
-
-var app = new App();
-app.run();
+const app = new App();
+app.run().then(() => console.log('done')).catch(() => console.log('Error'));
