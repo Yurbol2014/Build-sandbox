@@ -1,6 +1,6 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-import './main.css'
+import './main.scss'
 
 const App = () =>  <p>yyy</p> 
 console.log(App);
