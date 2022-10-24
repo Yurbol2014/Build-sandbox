@@ -8,11 +8,7 @@ module.exports = {
 
        test: /\.js$/,
        exclude: /node_modules/,
-       use: [
-         {
-            loader: 'babel-loader'
-         }
-       ]
+       loader: 'babel-loader'
     },
 
       //
@@ -49,9 +45,8 @@ module.exports = {
        // Loading CSS
        {
          test: /\.(css)$/,
-         use: [
-            {loader: 'style-loader'},
-            {loader: 'css-loader'}
+         use: ['style-loader',
+         'css-loader'
          ]
        },
 
@@ -59,10 +54,9 @@ module.exports = {
 
        {
          test: /\.(s[ca]ss)$/,
-         use: [
-            {loader: 'style-loader'},
-            {loader: 'css-loader'},
-            {loader: 'sass-loader'}
+         use: ['style-loader',
+         'css-loader',
+         'sass-loader'
          ]
        }
     ],
