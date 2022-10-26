@@ -65,6 +65,8 @@ module.exports = {
   },
   plugins: [
    new HtmlWebpackPlugin({
+      title: 'Hello Wordl',
+      buildTime: new Date().toISOString(),
       template: 'public/index.html'
    })
   ]
